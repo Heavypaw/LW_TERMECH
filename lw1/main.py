@@ -154,7 +154,7 @@ def animate(i):
     """Изменение величин для нового шага анимации"""
     global r_y_v_arrow, r_x_v_arrow, r_x_w_arrow, r_y_w_arrow, r_x_r_arrow, r_y_r_arrow
 
-    point.set_data(X[i], Y[i])
+    point.set_data([X[i]], [Y[i]])  # Исправлено: передаем списки
 
     v_line.set_data([X[i], X[i] + VX[i]], [Y[i], Y[i] + VY[i]])
     r_x_v_arrow, r_y_v_arrow = rot2d(x_v_arrow, y_v_arrow, math.atan2(VY[i], VX[i]))
